@@ -1,7 +1,7 @@
 describe('Block 1', () => {
   beforeEach(() => {
     window.localStorage.setItem('secret', 'random');
-    cy.route2('https://staging.api.kisi.io/user').as('getBaseUser');
+    cy.intercept('https://staging.api.kisi.io/user').as('getBaseUser');
   });
 
   it('Silly test 1', () => {
